@@ -14,7 +14,8 @@
 | Commitlint          | Lint your commits             | Taplo & Lefthook     | Complete    |
 | PNPM                | Fast & disk-space efficient   |                      | Complete    |
 | Github actions      | Lint your PRs                 |                      | Todo        |
-| Baseline components | A proper quickstart           | See `src/components` | Todo        |
+| Sitemap & Robots    |                               |                      | Complete    |
+| Baseline components | A proper quickstart           | See `src/components` | In progress |
 | Atomic pattern      | Component structure           |                      | Todo        |
 
 If you want to see a tool added to this starter, [email me](mailto:gallegogarciasergio@gmail.com) and let’s make it happen!
