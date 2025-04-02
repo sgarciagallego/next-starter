@@ -1,0 +1,46 @@
+{
+  "files": {
+    "ignoreUnknown": false,
+    "ignore": [".next", "node_modules", "out"]
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "correctness": {
+        "noUnusedImports": "error"
+      },
+      "nursery": {
+        "noCommonJs": "error"
+      },
+      "a11y": {
+        "all": true
+      },
+      "performance": {
+        "all": true
+      }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": true,
+    "useEditorconfig": true,
+    "lineWidth": 65
+  },
+  "organizeImports": {
+    "enabled": true
+  },
+  "javascript": {
+    "linter": {
+      "enabled": true
+    },
+    "jsxRuntime": "reactClassic",
+    "formatter": {
+      "enabled": true,
+      "quoteStyle": "single",
+      "jsxQuoteStyle": "single",
+      "trailingCommas": "es5",
+      "semicolons": "always"
+    }
+  }
+}
