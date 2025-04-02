@@ -24,7 +24,7 @@ If you want to see a tool added to this starter, [email me](mailto:gallegogarcia
 ### 1. Clone this template
 
 ```bash
-pnpm dlx create-next-app -e https://github.com/sgarciagallego/next-starter.git
+pnpm dlx create-next-app -e https://github.com/sgarciagallego/next-starter
 ```
 
 ### 2. Install dependencies
