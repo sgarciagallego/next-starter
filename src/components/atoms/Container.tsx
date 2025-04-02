@@ -2,23 +2,41 @@ import { styled } from '@linaria/react';
 
 export default function Container({
   as: Component = 'div',
+  position = 'normal',
   children,
 }: {
   as?: React.ElementType;
+  position?: 'normal' | 'center';
   children: React.ReactNode;
 }) {
   return Component === 'div' ? (
-    <StyledContainer>{children}</StyledContainer>
+    <StyledContainer position={position}>
+      {children}
+    </StyledContainer>
   ) : (
     <Component>
-      <StyledContainer>{children}</StyledContainer>
+      <StyledContainer position={position}>
+        {children}
+      </StyledContainer>
     </Component>
   );
 }
 
-const StyledContainer = styled.div`
+const StyledContainer = styled.div<{
+  position?: 'normal' | 'center';
+}>`
   width: 100%;
+  height: ${({ position }) =>
+    position === 'center' ? '100svh' : 'auto'};
   margin: 0 auto;
+  display: ${({ position }) =>
+    position === 'center' ? 'flex' : ''};
+  flex-direction: ${({ position }) =>
+    position === 'center' ? 'column' : ''};
+  justify-content: ${({ position }) =>
+    position === 'center' ? 'center' : ''};
+  align-items: ${({ position }) =>
+    position === 'center' ? 'center' : ''};
 
   @media (min-width: 320px) {
     max-width: calc(320px - 2rem);
