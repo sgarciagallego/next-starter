@@ -1,4 +1,4 @@
-import React from 'react';
+import '@/styles/style.linaria.global';
 
 export default function RootLayout({
   children,
