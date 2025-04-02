@@ -7,7 +7,7 @@
 | Next.js             |                               | v15 `/app` router    | Complete    |
 | React               |                               | v19                  | Complete    |
 | Typescript          |                               |                      | Complete    |
-| Linaria             | CSS-in-JS compatible with RSC |                      | In progress |
+| Linaria             | CSS-in-JS compatible with RSC |                      | Complete    |
 | Jest                | JSDom & Babel                 |                      | Complete    |
 | Biome               | Format & lint code            |                      | Complete    |
 | I18n                | Globally adaptable            |                      | Todo        |
