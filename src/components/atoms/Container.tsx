@@ -30,7 +30,7 @@ const StyledContainer = styled.div<{
     position === 'center' ? '100svh' : 'auto'};
   margin: 0 auto;
   display: ${({ position }) =>
-    position === 'center' ? 'flex' : ''};
+    position === 'center' ? 'flex' : 'block'};
   flex-direction: ${({ position }) =>
     position === 'center' ? 'column' : ''};
   justify-content: ${({ position }) =>

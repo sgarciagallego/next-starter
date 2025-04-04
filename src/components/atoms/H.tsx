@@ -28,10 +28,10 @@ const StyledH = styled.h1<{
   size?: 'lg' | 'xl' | '2xl' | '3xl';
 }>`
   margin-bottom: 0.5em;
-  font-family: var(--font-typeface--sans);
+  overflow-wrap: break-word;
   font-size: ${({ size = '3xl' }) => `var(--font-size--${size})`};
   font-weight: 600;
   letter-spacing: -0.0375em;
   line-height: 1.15;
-  overflow-wrap: break-word;
+  text-wrap: balance;
 `;

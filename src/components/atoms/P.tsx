@@ -11,9 +11,9 @@ export default function P({
 }
 
 const StyledP = styled.p<{ size?: 'xs' | 'sm' | 'rg' }>`
-  font-family: var(--font-typeface--sans);
-  font-size: ${({ size = 'rg' }) => `var(--font-size--${size})`};
   overflow-wrap: break-word;
+  font-size: ${({ size = 'rg' }) => `var(--font-size--${size})`};
+  text-wrap: pretty;
 
   &:not(:last-child) {
     margin-bottom: 2rem;

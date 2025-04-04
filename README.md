@@ -8,7 +8,6 @@
 | React               |                               | v19                  | Complete    |
 | Typescript          |                               |                      | Complete    |
 | Linaria             | CSS-in-JS compatible with RSC |                      | Complete    |
-| Jest                | JSDom & Babel                 |                      | Complete    |
 | Biome               | Format & lint code            |                      | Complete    |
 | I18n                | Globally adaptable            |                      | Todo        |
 | Commitlint          | Lint your commits             | Taplo & Lefthook     | Complete    |
@@ -16,7 +15,8 @@
 | Github actions      | Lint your PRs                 |                      | Todo        |
 | Sitemap & Robots    |                               |                      | Complete    |
 | Baseline components | A proper quickstart           | See `src/components` | In progress |
-| Atomic pattern      | Component structure           |                      | Todo        |
+| Atomic pattern      | Component structure           |                      | In progress |
+| Fluid typography    |                               |                      | Complete    |
 
 If you want to see a tool added to this starter, [email me](mailto:gallegogarciasergio@gmail.com) and let’s make it happen!
 
