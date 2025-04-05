@@ -18,6 +18,9 @@
       },
       "performance": {
         "all": true
+      },
+      "security": {
+        "noDangerouslySetInnerHtml": "off"
       }
     }
   },

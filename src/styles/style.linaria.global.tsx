@@ -2,6 +2,7 @@ import { css } from '@linaria/core';
 
 export const globals = css`
   :global() {
+    /* fluid typography */
     @supports (font-size: clamp(1rem, 1cqi, 1rem)) {
       :root {
         --font-size--xs: clamp(0.651rem, -0.0245cqi + 0.6584rem, 0.64rem);
@@ -36,6 +37,22 @@ export const globals = css`
       }
     }
 
+    /* code highlighter */
+    :root {
+      --sh-line-number: #747474;
+      --sh-background: #1e1e1f;
+      --sh-class: #8fc7ff;
+      --sh-identifier: #dfd6cf;
+      --sh-sign: #b8d7f9;
+      --sh-property: #eecfa0;
+      --sh-entity: #edabaa;
+      --sh-jsxliterals: #cbd5e1;
+      --sh-string: #a4dfae;
+      --sh-keyword: #e3cbeb;
+      --sh-comment: #999999;
+    }
+
+    /* css reset */
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -65,6 +82,10 @@ export const globals = css`
     
     input, button, textarea, select {
       font: inherit;
+    }
+
+    pre, code, kbd, samp {
+      font-family: var(--font-typeface--mono);
     }
   }
 `;

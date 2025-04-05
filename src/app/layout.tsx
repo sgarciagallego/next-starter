@@ -1,6 +1,6 @@
 import Container from '@/components/atoms/Container';
 import '@/styles/style.linaria.global';
-import { geist, geistMono } from 'fonts';
+import { geist, mapleMono } from 'fonts';
 import { siteConfig } from 'lib/constant';
 import type { Metadata } from 'next';
 
@@ -39,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang='en-GB'>
       <body
-        className={`${geist.variable} ${geistMono.variable}`}
+        className={`${geist.variable} ${mapleMono.variable}`}
       >
         <Container as='main' position='center'>
           {children}

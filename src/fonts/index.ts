@@ -1,4 +1,5 @@
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Geist } from 'next/font/google';
+import localFont from 'next/font/local';
 
 export const geist = Geist({
   subsets: ['latin'],
@@ -7,8 +8,29 @@ export const geist = Geist({
   variable: '--font-typeface--sans',
 });
 
-export const geistMono = Geist_Mono({
-  subsets: ['latin'],
+export const mapleMono = localFont({
+  src: [
+    {
+      path: './mono/roman/400.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './mono/roman/800.woff2',
+      weight: '800',
+      style: 'normal',
+    },
+    {
+      path: './mono/italic/400.woff2',
+      weight: '400',
+      style: 'italic',
+    },
+    {
+      path: './mono/italic/800.woff2',
+      weight: '800',
+      style: 'italic',
+    },
+  ],
   display: 'swap',
   fallback: ['monospace'],
   variable: '--font-typeface--mono',
