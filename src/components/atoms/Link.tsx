@@ -6,7 +6,7 @@ export default function Link({
   href,
   children,
 }: {
-  type: 'inline' | 'block';
+  type?: 'inline' | 'block';
   href: string;
   children: React.ReactNode;
 }) {
