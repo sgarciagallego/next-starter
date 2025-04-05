@@ -8,6 +8,10 @@
   "dependencies": {
     "@linaria/core": "^6.3.0",
     "@linaria/react": "^6.3.0",
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@next/mdx": "^15.2.4",
+    "@types/mdx": "^2.0.13",
     "@wyw-in-js/babel-preset": "^0.6.0",
     "next": "^15.2.4",
     "next-with-linaria": "^0.7.0",

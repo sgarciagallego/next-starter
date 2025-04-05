@@ -6,11 +6,14 @@ export default function CodeBlock({
 }: {
   children: string;
 }) {
-  const code = highlight(children.trim());
+  const code =
+    typeof children === 'string' ? children : String(children);
+
+  const html = highlight(code.trim());
 
   return (
     <StyledPre>
-      <StyledCode dangerouslySetInnerHTML={{ __html: code }} />
+      <StyledCode dangerouslySetInnerHTML={{ __html: html }} />
     </StyledPre>
   );
 }

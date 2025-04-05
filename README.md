@@ -14,6 +14,7 @@
 | PNPM                | Fast & disk-space efficient   |                      | Complete    |
 | Github actions      | Lint your PRs                 |                      | Todo        |
 | Sitemap & Robots    |                               |                      | Complete    |
+| MDX                 | @next/mdx                     |                      | Complete    |
 | Baseline components | A proper quickstart           | See `src/components` | In progress |
 | Syntax highlighter  | Sugar-high with Maple theming |                      | Complete    |
 | Atomic pattern      | Component structure           |                      | In progress |

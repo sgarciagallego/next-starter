@@ -14,5 +14,7 @@ export default function Code({
 }
 
 const StyledCode = styled.code`
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.375rem;
   background: var(--sh-background);
 `;
