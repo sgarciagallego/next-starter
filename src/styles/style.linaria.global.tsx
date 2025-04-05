@@ -37,21 +37,6 @@ export const globals = css`
       }
     }
 
-    /* code highlighter */
-    :root {
-      --sh-line-number: #747474;
-      --sh-background: #1e1e1f;
-      --sh-class: #8fc7ff;
-      --sh-identifier: #dfd6cf;
-      --sh-sign: #b8d7f9;
-      --sh-property: #eecfa0;
-      --sh-entity: #edabaa;
-      --sh-jsxliterals: #cbd5e1;
-      --sh-string: #a4dfae;
-      --sh-keyword: #e3cbeb;
-      --sh-comment: #999999;
-    }
-
     /* css reset */
     *, *::before, *::after {
       box-sizing: border-box;

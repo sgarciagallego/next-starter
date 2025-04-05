@@ -15,10 +15,12 @@
 | Github actions      | Lint your PRs                 |                      | Todo        |
 | Sitemap & Robots    |                               |                      | Complete    |
 | MDX                 | @next/mdx                     |                      | Complete    |
+| Icons               | Lucide                        |                      | Complete    |
 | Baseline components | A proper quickstart           | See `src/components` | In progress |
-| Syntax highlighter  | Sugar-high with Maple theming |                      | Complete    |
+| Syntax highlighter  | Shiki with dark/light theme   |                      | Complete    |
 | Atomic pattern      | Component structure           |                      | In progress |
 | Fluid typography    |                               |                      | Complete    |
+| Documentation       |                               |                      | To do       |
 
 If you want to see a tool added to this starter, [email me](mailto:gallegogarciasergio@gmail.com) and let’s make it happen!
 

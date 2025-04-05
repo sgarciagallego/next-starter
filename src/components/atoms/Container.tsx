@@ -26,7 +26,7 @@ const StyledContainer = styled.div<{
   position?: 'normal' | 'center';
 }>`
   width: 100%;
-  height: ${({ position }) =>
+  min-height: ${({ position }) =>
     position === 'center' ? '100svh' : 'auto'};
   margin: 0 auto;
   display: ${({ position }) =>
