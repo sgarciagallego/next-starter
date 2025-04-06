@@ -20,6 +20,7 @@
 | Syntax highlighter  | Shiki with dark/light theme   |                      | Complete    |
 | Atomic pattern      | Component structure           |                      | In progress |
 | Fluid typography    |                               |                      | Complete    |
+| Perfect benchmarks  |                               |                      | In progress |
 | Documentation       |                               |                      | To do       |
 
 If you want to see a tool added to this starter, [email me](mailto:gallegogarciasergio@gmail.com) and let’s make it happen!

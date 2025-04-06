@@ -1,13 +1,15 @@
+import Code from '@/components/atoms/Code';
 import H from '@/components/atoms/H';
 import Link from '@/components/atoms/Link';
 import P from '@/components/atoms/P';
+import CodeBlock from '@/components/molecules/CodeBlock';
 import type { MDXComponents } from 'mdx/types';
-import CodeBlock from './components/molecules/CodeBlock';
 
 export function useMDXComponents(
   components: MDXComponents
 ): MDXComponents {
   return {
+    code: ({ children }) => <Code>{children}</Code>,
     pre: ({ children }) => (
       <CodeBlock>{children.props.children}</CodeBlock>
     ),
