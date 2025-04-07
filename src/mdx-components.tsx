@@ -1,3 +1,4 @@
+import Blockquote from '@/components/atoms/Blockquote';
 import Code from '@/components/atoms/Code';
 import H from '@/components/atoms/H';
 import Link from '@/components/atoms/Link';
@@ -10,9 +11,6 @@ export function useMDXComponents(
 ): MDXComponents {
   return {
     code: ({ children }) => <Code>{children}</Code>,
-    pre: ({ children }) => (
-      <CodeBlock>{children.props.children}</CodeBlock>
-    ),
     h1: ({ children }) => <H level={1}>{children}</H>,
     h2: ({ children }) => <H level={2}>{children}</H>,
     h3: ({ children }) => <H level={3}>{children}</H>,
@@ -21,6 +19,12 @@ export function useMDXComponents(
       <Link href={href}>{children}</Link>
     ),
     p: ({ children }) => <P>{children}</P>,
+    pre: ({ children }) => (
+      <CodeBlock>{children.props.children}</CodeBlock>
+    ),
+    blockquote: ({ children }) => (
+      <Blockquote>{children}</Blockquote>
+    ),
     ...components,
   };
 }

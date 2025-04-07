@@ -7,13 +7,11 @@ export default function Link({
   href,
   children,
 }: {
-  type?: 'primary' | 'secondary' | 'inline';
-  href: string;
+  type?: 'primary' | 'secondary' | 'inline' | 'skiplink';
+  href?: string;
   children: React.ReactNode;
 }) {
-  if (!href) return <>{children}</>;
-
-  if (href.startsWith('/')) {
+  if (href?.startsWith('/')) {
     return (
       <NextLink
         href={href}
@@ -28,7 +26,7 @@ export default function Link({
     );
   }
 
-  if (href.startsWith('#')) {
+  if (href?.startsWith('#')) {
     return (
       <a
         href={href}
@@ -38,6 +36,14 @@ export default function Link({
           type === 'inline' && inline
         )}
       >
+        {children}
+      </a>
+    );
+  }
+
+  if (type === 'skiplink') {
+    return (
+      <a href='#main-content' className={`sr-only ${skiplink}`}>
         {children}
       </a>
     );
@@ -61,11 +67,11 @@ export default function Link({
 }
 
 const primary = css`
-  border: 1px solid rgb(10, 10, 10);
+  border: 1px solid var(--color-100);
   border-radius: 0.25rem;
   padding: 0.375rem 1rem;
-  background: rgb(31, 31, 31);
-  color: rgb(255, 255, 255);
+  background: var(--color-80);
+  color: var(--color-0);
   font-weight: 500;
   text-decoration: none;
 
@@ -74,25 +80,26 @@ const primary = css`
   }
 
   &:hover {
-    border: 1px solid rgb(52, 52, 52);
-    background: rgb(73, 73, 73);
+    border: 1px solid var(--color-80);
+    background: var(--color-70);
   }
 
   &:active,
   &:focus-visible {
     outline: none;
-    border: 1px solid rgb(0, 0, 0);
-    background: rgb(255, 230, 51);
-    background-image: linear-gradient(to top, rgb(10, 10, 10) 0.125rem, rgb(255, 230, 51) 0.125rem, rgb(255, 230, 51));
-    color: rgb(0, 0, 0);
+    border: 1px solid var(--color-100);
+    background: var(--color-yellow);
+    background-image: linear-gradient(to top, var(--color-100) 0.125rem, var(--color-yellow) 0.125rem, var(--color-yellow));
+    color: var(--color-100);
   }
 `;
 
 const secondary = css`
-  border: 1px solid rgb(224, 224, 224);
+  border: 1px solid var(--color-20);
   border-radius: 0.25rem;
   padding: 0.375rem 1rem;
-  color: rgb(0, 0, 0);
+  background: var(--color-0);
+  color: var(--color-100);
   font-weight: 500;
   text-decoration: none;
 
@@ -101,36 +108,60 @@ const secondary = css`
   }
 
   &:hover {
-    background: rgb(245, 245, 245);
+    background: var(--color-10);
   }
 
   &:active,
   &:focus-visible {
     outline: none;
-    border: 1px solid rgb(0, 0, 0);
-    background: rgb(255, 230, 51);
-    background-image: linear-gradient(to top, rgb(10, 10, 10) 0.125rem, rgb(255, 230, 51) 0.125rem, rgb(255, 230, 51));
-    color: rgb(0, 0, 0);    
+    border: 1px solid var(--color-100);
+    background: var(--color-yellow);
+    background-image: linear-gradient(to top, var(--color-100) 0.125rem, var(--color-yellow) 0.125rem, var(--color-yellow));
+    color: var(--color-100);
   }
 `;
 
 const inline = css`
-  color: rgb(0, 0, 0);
+  color: var(--color-100);
   text-decoration: underline;
-  text-decoration-color: rgb(0, 0, 0);
+  text-decoration-color: var(--color-100);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.25rem;
   line-height: 1.275em;
 
   &:hover {
-    background: rgb(235, 235, 235);
+    background: var(--color-20);
   }
 
   &:active,
   &:focus-visible {
     outline: none;
-    background: rgb(255, 230, 51);
-    background-image: linear-gradient(to top, rgb(10, 10, 10) 0.125rem, rgb(255, 230, 51) 0.125rem, rgb(255, 230, 51));
-    color: rgb(0, 0, 0);
+    background: var(--color-yellow);
+    background-image: linear-gradient(to top, var(--color-100) 0.125rem, var(--color-yellow) 0.125rem, var(--color-yellow));
+    color: var(--color-100);
+  }
+`;
+
+const skiplink = css`
+  &:focus-visible {
+    width: fit-content;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    clip-path: none;
+    outline: none;
+    border: 1px solid var(--color-100);
+    border-radius: 0.25rem;
+    padding: 0.375rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;   
+    background: var(--color-yellow);
+    color: var(--color-100);
+    text-decoration: none;
+    white-space: normal;
   }
 `;

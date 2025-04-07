@@ -2,19 +2,21 @@ import { styled } from '@linaria/react';
 
 export default function Container({
   as: Component = 'div',
+  id,
   position = 'normal',
   children,
 }: {
   as?: React.ElementType;
+  id?: string;
   position?: 'normal' | 'center';
   children: React.ReactNode;
 }) {
   return Component === 'div' ? (
-    <StyledContainer position={position}>
+    <StyledContainer id={id} position={position}>
       {children}
     </StyledContainer>
   ) : (
-    <Component>
+    <Component id={id}>
       <StyledContainer position={position}>
         {children}
       </StyledContainer>

@@ -2,6 +2,23 @@ import { css } from '@linaria/core';
 
 export const globals = css`
   :global() {
+    // theming
+    :root {
+      --color-0: hsl(0, 0%, 100%);
+      --color-10: hsl(0, 0%, 96%);
+      --color-20: hsl(0, 0%, 85%);
+      --color-30: hsl(0, 0%, 73%);
+      --color-40: hsl(0, 0%, 62%);
+      --color-50: hsl(0, 0%, 50%);
+      --color-60: hsl(0, 0%, 39%);
+      --color-70: hsl(0, 0%, 27%);
+      --color-80: hsl(0, 0%, 16%); 
+      --color-90: hsl(0, 0%, 4%);
+      --color-100: hsl(0, 0%, 0%);
+
+      --color-yellow: rgb(255, 230, 51);
+    }
+
     // fluid typography
     @supports (font-size: clamp(1rem, 1cqi, 1rem)) {
       :root {
@@ -92,6 +109,8 @@ export const globals = css`
     }
 
     body {
+      background: var(--color-10);
+      color: var(--color-90);
       font-family: var(--font-typeface--sans);
       line-height: 1.5;
       -webkit-font-smoothing: antialiased;
@@ -122,12 +141,15 @@ export const globals = css`
 
     /* accessible to screen readers */
     .sr-only {
-      position: absolute;
-      left: -10000px;
-      top: auto;
       width: 1px;
       height: 1px;
       overflow: hidden;
+      position: absolute;
+      top: auto;
+      left: -10000px;
+      clip: rect(0, 0, 0, 0);
+      clip-path: inset(50%);
+      white-space: nowrap;
     }
   }
 `;
