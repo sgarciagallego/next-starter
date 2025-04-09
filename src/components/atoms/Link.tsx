@@ -156,7 +156,7 @@ const skiplink = css`
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    position: fixed;
     top: 1rem;
     left: 1rem;   
     background: var(--color-yellow);

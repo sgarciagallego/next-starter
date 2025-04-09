@@ -1,6 +1,7 @@
 import Blockquote from '@/components/atoms/Blockquote';
 import Code from '@/components/atoms/Code';
 import H from '@/components/atoms/H';
+import Image from '@/components/atoms/Image';
 import Link from '@/components/atoms/Link';
 import P from '@/components/atoms/P';
 import CodeBlock from '@/components/molecules/CodeBlock';
@@ -15,6 +16,7 @@ export function useMDXComponents(
     h2: ({ children }) => <H level={2}>{children}</H>,
     h3: ({ children }) => <H level={3}>{children}</H>,
     h4: ({ children }) => <H level={4}>{children}</H>,
+    img: ({ src, alt }) => <Image src={src} alt={alt} />,
     a: ({ children, href }) => (
       <Link href={href}>{children}</Link>
     ),

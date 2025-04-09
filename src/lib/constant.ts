@@ -3,6 +3,6 @@ export const siteConfig = {
     process.env.NODE_ENV === 'production'
       ? 'https://next-starter.sergiogarciagallego.com'
       : 'http://localhost:3000',
-  title: 'Next.js Starter',
+  title: 'Sergio Garcia Gallego',
   description: '',
 };
