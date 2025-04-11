@@ -1,23 +1,42 @@
+import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
+import { clsx } from 'utils/helpers';
 
 export default function Container({
   as: Component = 'div',
   id,
   position = 'normal',
+  size = 'lg',
   children,
 }: {
   as?: React.ElementType;
   id?: string;
   position?: 'normal' | 'center';
+  size?: 'sm' | 'md' | 'lg';
   children: React.ReactNode;
 }) {
   return Component === 'div' ? (
-    <StyledContainer id={id} position={position}>
+    <StyledContainer
+      id={id}
+      position={position}
+      className={clsx(
+        size === 'sm' && sizeSm,
+        size === 'md' && sizeMd,
+        size === 'lg' && sizeLg
+      )}
+    >
       {children}
     </StyledContainer>
   ) : (
     <Component id={id}>
-      <StyledContainer position={position}>
+      <StyledContainer
+        position={position}
+        className={clsx(
+          size === 'sm' && sizeSm,
+          size === 'md' && sizeMd,
+          size === 'lg' && sizeLg
+        )}
+      >
         {children}
       </StyledContainer>
     </Component>
@@ -50,12 +69,33 @@ const StyledContainer = styled.div<{
   @media (min-width: 768px) {
     max-width: calc(768px - 2rem);
   }
+`;
+
+const sizeSm = css`
   @media (min-width: 1024px) {
     max-width: calc(1024px - 2rem);
   }
+`;
+
+const sizeMd = css`
+  @media (min-width: 1024px) {
+    max-width: calc(1024px - 2rem);
+  }
+
   @media (min-width: 1280px) {
     max-width: calc(1280px - 2rem);
   }
+`;
+
+const sizeLg = css`
+  @media (min-width: 1024px) {
+    max-width: calc(1024px - 2rem);
+  }
+
+  @media (min-width: 1280px) {
+    max-width: calc(1280px - 2rem);
+  }
+
   @media (min-width: 1536px) {
     max-width: calc(1536px - 2rem);
   }
