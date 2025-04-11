@@ -29,15 +29,13 @@ const StyledContainer = styled.div<{
 }>`
   width: 100%;
   min-height: ${({ position }) =>
-    position === 'center' ? '100svh' : 'auto'};
+    position === 'center' ? 'calc(100svh - 8rem)' : 'auto'};
   margin: 0 auto;
   display: ${({ position }) =>
     position === 'center' ? 'flex' : 'block'};
   flex-direction: ${({ position }) =>
     position === 'center' ? 'column' : ''};
   justify-content: ${({ position }) =>
-    position === 'center' ? 'center' : ''};
-  align-items: ${({ position }) =>
     position === 'center' ? 'center' : ''};
 
   @media (min-width: 320px) {

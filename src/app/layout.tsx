@@ -1,5 +1,6 @@
 import Container from '@/components/atoms/Container';
 import Link from '@/components/atoms/Link';
+import Header from '@/components/organisms/Header';
 import '@/styles/style.linaria.global';
 import { geist, mapleMono } from 'fonts';
 import { siteConfig } from 'lib/constant';
@@ -43,6 +44,7 @@ export default function RootLayout({
         className={`${geist.variable} ${mapleMono.variable}`}
       >
         <Link type='skiplink'>Skip to content</Link>
+        <Header />
         <Container as='main' id='main-content' position='center'>
           {children}
         </Container>

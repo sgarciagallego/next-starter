@@ -48,6 +48,10 @@ const StyledCodeContainer = styled.div`
   height: fit-content;
   border-radius: 0.5rem;
 
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
   & .shiki code {
     overflow-x: auto;
     scrollbar-width: none;
