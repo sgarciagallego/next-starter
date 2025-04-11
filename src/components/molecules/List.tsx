@@ -17,7 +17,7 @@ export default function List({
   Children.forEach(children as ReactNode, (child) => {
     if (isValidElement(child) && child.type !== 'li') {
       throw new Error(
-        'List children must be a valid React element of type "li".'
+        `In HTML, <${child.type}> cannot be a child of <${Component}>.`
       );
     }
   });
