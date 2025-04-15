@@ -59,8 +59,9 @@ const StyledHeader = styled.header`
     & > li {
       & > h2 {
         margin-bottom: unset;
-        font-size: unset;
-        font-weight: unset;
+        color: var(--sp-colors-hover);
+        font-size: 1rem;
+        font-weight: 500;
         line-height: 1.5;
         letter-spacing: unset;
       }

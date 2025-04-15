@@ -3,8 +3,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "biome check ."
+    "lint": "biome check .",
+    "preinstall": "npx only-allow pnpm"
   },
+  "packageManager": "pnpm@10.8.1",
   "dependencies": {
     "@codesandbox/sandpack-react": "^2.20.0",
     "@linaria/core": "^6.3.0",

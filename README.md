@@ -18,6 +18,7 @@
 | Icons               | Lucide                        |                      | Complete    |
 | Baseline components | A proper quickstart           | See `src/components` | In progress |
 | Syntax highlighter  | Shiki with dark/light theme   |                      | Complete    |
+| Code Playground     | Custom Sandpack configuration |                      | Complete    |
 | Atomic pattern      | Component structure           |                      | In progress |
 | Fluid typography    |                               |                      | Complete    |
 | Perfect benchmarks  |                               |                      | In progress |
