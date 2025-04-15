@@ -1,7 +1,6 @@
 import Container from '@/components/atoms/Container';
 import Link from '@/components/atoms/Link';
 import Header from '@/components/organisms/Header';
-import CodePlayground from '@/components/template/CodePlayground';
 import '@/styles/style.linaria.global';
 import { geist, mapleMono } from 'fonts';
 import { siteConfig } from 'lib/constant';
@@ -48,15 +47,6 @@ export default function RootLayout({
         <Header />
         <Container as='main' id='main-content' position='center'>
           {children}
-          <CodePlayground
-            template='react'
-            files={{
-              'App.js':
-                'import React from "react";\nimport "./styles.css";\n\nexport default function App() {\n\treturn (\n\t\t<>\n\t\t\t<h1>Hello world!</h1>\n\t\t\t<p>How are you doing?</p>\n\t\t</>\n\t);\n}',
-              'styles.css':
-                'h1 {\n\tfont-family: sans-serif;\n}',
-            }}
-          />
         </Container>
       </body>
     </html>

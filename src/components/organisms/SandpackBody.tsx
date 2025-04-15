@@ -1,20 +1,26 @@
 import SandpackCodePreview from '@/components/molecules/SandpackCodePreview';
-import type { SandpackFiles } from '@codesandbox/sandpack-react';
+import type {
+  SandpackFiles,
+  SandpackPredefinedTemplate,
+} from '@codesandbox/sandpack-react';
 import { SandpackCodeEditor } from '@codesandbox/sandpack-react';
 import { styled } from '@linaria/react';
 
 export default function SandpackBody({
   files,
+  template,
 }: {
   files?: SandpackFiles;
+  template: SandpackPredefinedTemplate;
 }) {
   return (
     <StyledContainer>
       <StyledWrapper>
         <SandpackCodeEditor
           showTabs={files && Object.keys(files).length > 1}
+          wrapContent
         />
-        <SandpackCodePreview />
+        <SandpackCodePreview template={template} />
       </StyledWrapper>
     </StyledContainer>
   );

@@ -2,6 +2,7 @@
 
 import Button from '@/components/atoms/Button';
 import List from '@/components/molecules/List';
+import type { SandpackPredefinedTemplate } from '@codesandbox/sandpack-react';
 import {
   useSandpack,
   useSandpackNavigation,
@@ -15,9 +16,11 @@ import { clsx } from 'utils/helpers';
 export default function SandpackPreviewActions({
   isPreview,
   setMode,
+  template,
 }: {
   isPreview: boolean;
   setMode: (mode: 'result' | 'console') => void;
+  template: SandpackPredefinedTemplate;
 }) {
   const [reloading, setReloading] = useState(false);
   const { sandpack, listen } = useSandpack();
@@ -63,20 +66,22 @@ export default function SandpackPreviewActions({
             Console
           </Button>
         </li>
-        <li>
-          <Button
-            onClick={() => {
-              setReloading(true);
-              refresh();
-            }}
-            ariaLabel='Refresh preview pane'
-            title='Refresh preview pane'
-          >
-            <RefreshCw
-              className={clsx(spBtnBase, reloading && reload)}
-            />
-          </Button>
-        </li>
+        {template !== 'static' && (
+          <li>
+            <Button
+              onClick={() => {
+                setReloading(true);
+                refresh();
+              }}
+              ariaLabel='Refresh preview pane'
+              title='Refresh preview pane'
+            >
+              <RefreshCw
+                className={clsx(spBtnBase, reloading && reload)}
+              />
+            </Button>
+          </li>
+        )}
       </List>
     </StyledWrapper>
   );

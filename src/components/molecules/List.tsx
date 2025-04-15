@@ -1,5 +1,5 @@
 import { css } from '@linaria/core';
-import type { ReactElement, ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import { Children, isValidElement } from 'react';
 import { clsx } from 'utils/helpers';
 
@@ -12,7 +12,7 @@ export default function List({
   as?: 'ul' | 'ol';
   direction?: 'row' | 'column';
   marker?: boolean;
-  children: ReactElement<'li'> | ReactElement<'li'>[];
+  children: React.ReactNode;
 }) {
   Children.forEach(children as ReactNode, (child) => {
     if (isValidElement(child) && child.type !== 'li') {

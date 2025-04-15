@@ -10,7 +10,7 @@ import { SandpackProvider } from '@codesandbox/sandpack-react';
 export default function CodePlayground({
   template = 'static',
   files,
-  title,
+  title = 'Playground',
 }: {
   template?: SandpackPredefinedTemplate;
   files?: SandpackFiles;
@@ -23,8 +23,10 @@ export default function CodePlayground({
       theme={theme}
       options={options}
     >
-      <SandpackHeader title={title} />
-      <SandpackBody files={files} />
+      <SandpackHeader
+        title={`${template.charAt(0).toUpperCase() + template.slice(1)} ${title}`}
+      />
+      <SandpackBody files={files} template={template} />
     </SandpackProvider>
   );
 }

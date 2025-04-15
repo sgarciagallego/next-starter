@@ -14,8 +14,10 @@ import { clsx } from 'utils/helpers';
 import { spBtnBase } from '../molecules/SandpackPreviewActions';
 
 export default function SandpackHeader({
-  title = 'Code Playground',
-}: { title?: string }) {
+  title,
+}: {
+  title?: string;
+}) {
   const { sandpack } = useSandpack();
   const { resetAllFiles } = sandpack;
 
