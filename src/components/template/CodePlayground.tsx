@@ -1,6 +1,7 @@
 import SandpackBody from '@/components/organisms/SandpackBody';
 import SandpackHeader from '@/components/organisms/SandpackHeader';
-import { options, theme } from '@/lib/sandpack';
+import { options } from '@/lib/sandpack/options';
+import { theme } from '@/lib/sandpack/theme';
 import type {
   SandpackFiles,
   SandpackPredefinedTemplate,

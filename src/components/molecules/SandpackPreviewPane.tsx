@@ -1,8 +1,8 @@
-import { block, hidden } from '@/lib/sandpack';
 import {
   SandpackConsole,
   SandpackPreview,
 } from '@codesandbox/sandpack-react';
+import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { clsx } from 'utils/helpers';
 
@@ -50,11 +50,24 @@ const StyledContainer = styled.div`
 const StyledWrapper = styled.div`
   overflow: clip;
   height: 100%;
+  max-height: calc(100svh - 16rem);
   border-radius: 0.25rem;
+
+  @media (min-width: 1024px) {
+    min-height: 12rem;
+  }
 `;
 
 const StyledOutput = styled.output`
   &, & > * {
     height: 100%;
   }
+`;
+
+const hidden = css`
+  display: none;
+`;
+
+const block = css`
+  display: block;
 `;

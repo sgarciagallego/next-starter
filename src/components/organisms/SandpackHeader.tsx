@@ -3,15 +3,13 @@
 import Button from '@/components/atoms/Button';
 import H from '@/components/atoms/H';
 import List from '@/components/molecules/List';
-import { sandpackBtn } from '@/lib/sandpack';
 import {
   UnstyledOpenInCodeSandboxButton,
   useSandpack,
 } from '@codesandbox/sandpack-react';
+import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { SkipBack, SquareArrowOutUpRight } from 'lucide-react';
-import { clsx } from 'utils/helpers';
-import { spBtnBase } from '../molecules/SandpackPreviewActions';
 
 export default function SandpackHeader({
   title,
@@ -32,7 +30,7 @@ export default function SandpackHeader({
             onClick={() => resetAllFiles()}
             ariaLabel='Reset code'
             title='Reset code'
-            className={spBtnBase}
+            className={sandpackButton}
           >
             <SkipBack />
           </Button>
@@ -41,7 +39,7 @@ export default function SandpackHeader({
           <UnstyledOpenInCodeSandboxButton
             aria-label='Open in CodeSandbox'
             title='Open in CodeSandbox'
-            className={clsx(sandpackBtn, spBtnBase)}
+            className={sandpackButton}
           >
             <SquareArrowOutUpRight />
           </UnstyledOpenInCodeSandboxButton>
@@ -72,5 +70,27 @@ const StyledHeader = styled.header`
         margin-left: auto;
       }
     }
+  }
+`;
+
+const sandpackButton = css`
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: unset;
+  border-radius: unset;
+  display: grid;
+  place-items: center;
+  background: unset;
+  
+  & > svg {
+    aspect-ratio: 1 / 1;
+    width: 1.125rem;
+    height: 1.125rem;
+    stroke: var(--sp-colors-clickable);
+  }
+
+  &:hover > svg {
+    stroke: var(--sp-colors-hover);
   }
 `;

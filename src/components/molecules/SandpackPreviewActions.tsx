@@ -50,7 +50,7 @@ export default function SandpackPreviewActions({
           <Button
             onClick={() => setMode('result')}
             ariaPressed={isPreview}
-            className={clsx(isPreview ? spBtnActive : spBtnBase)}
+            className={clsx(isPreview ? active : base)}
           >
             Preview
           </Button>
@@ -59,9 +59,7 @@ export default function SandpackPreviewActions({
           <Button
             onClick={() => setMode('console')}
             ariaPressed={!isPreview}
-            className={clsx(
-              !isPreview ? spBtnActive : spBtnBase
-            )}
+            className={clsx(!isPreview ? active : base)}
           >
             Console
           </Button>
@@ -75,10 +73,9 @@ export default function SandpackPreviewActions({
               }}
               ariaLabel='Refresh preview pane'
               title='Refresh preview pane'
+              className={base}
             >
-              <RefreshCw
-                className={clsx(spBtnBase, reloading && reload)}
-              />
+              <RefreshCw className={clsx(reloading && reload)} />
             </Button>
           </li>
         )}
@@ -107,7 +104,7 @@ const StyledWrapper = styled.div`
   }
 `;
 
-export const spBtnBase = css`
+const base = css`
   color: var(--sp-colors-clickable);
 
   &:hover {
@@ -115,7 +112,7 @@ export const spBtnBase = css`
   }
 `;
 
-const spBtnActive = css`
+const active = css`
   color: var(--sp-colors-hover);
 
   &::after {
